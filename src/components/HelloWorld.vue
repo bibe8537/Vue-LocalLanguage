@@ -1,5 +1,11 @@
 <template>
   <div class="hello">
+  <div>
+    <button v-on:click="showComponent=!showComponent">Load Greetings</button>
+    <div v-show="showComponent">
+      <greetings></greetings>
+    </div>
+  </div>
     <!-- <h1>{{ msg }}</h1> -->
     <h1>{{ $t('welcomeMsg') }}</h1>
     <p>{{ $t('guide') }}<br> </p>
@@ -35,10 +41,23 @@
 </template>
 
 <script>
+import Greetings from './Greetings.vue';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    'greetings': Greetings
+  },
+  data(){
+    return{
+      showComponent: false
+    }
+  },
+  methods: {
+  
   }
 }
 </script>
