@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <div>
-    <button
+    <ChangeLanguage></ChangeLanguage>
+    <!-- <button
     v-for="entry in languages" 
     :key="entry.title" 
     @click="changeLocale(entry.language)">        
     <flag :iso="entry.flag" v-bind:squared=false /> 
     {{entry.title}}
-    </button>
+    </button> -->
     </div>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -17,18 +18,21 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import i18n from '@/plugins/i18n';
+import ChangeLanguage from './components/ChangeLanguage.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    ChangeLanguage
   },
   data() {
     return {
-      languages: [
+      languages: [ // used only to create buttons 
         { flag: 'us', language: 'en', title: 'English' },
-        { flag: 'es', language: 'es', title: 'Español' }       
-      ]    
+        { flag: 'de', language: 'de', title: 'Deutsch' }       
+      ],
+      langs: ['en', 'de']    
     };
   },
   // This method will change the locale to the language on the button the user clicks

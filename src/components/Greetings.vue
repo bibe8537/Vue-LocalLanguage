@@ -4,9 +4,10 @@
     <p>This is good service</p>
     </div>
     <div class="footer">
-    <button type="button">{{ $t('buttons.save') }}</button>
+    <!-- <button type="button">{{ $t('buttons.save') }}</button> -->
     </div>
     <h3>Welcome to our online Shop</h3>
+    <h3>{{ $t('hello') }}</h3>
     <button>Explore</button>
     </div>
 </template>

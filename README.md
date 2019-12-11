@@ -38,4 +38,9 @@ npm install vue-flag-icon --save
 -- In main.js include
 import FlagIcon from 'vue-flag-icon'; Vue.use(FlagIcon)
 
+### install vue-loader and vue-i18n-loader due to use <i18n> custom blocks
+npm i --save-dev @kazupon/vue-i18n-loader
+-- include vue.config.js file in root
+
+
 
