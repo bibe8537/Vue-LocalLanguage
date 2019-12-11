@@ -2,13 +2,13 @@
   <div id="app">
     <div>
     <ChangeLanguage></ChangeLanguage>
-    <!-- <button
+    <button
     v-for="entry in languages" 
     :key="entry.title" 
     @click="changeLocale(entry.language)">        
     <flag :iso="entry.flag" v-bind:squared=false /> 
     {{entry.title}}
-    </button> -->
+    </button>
     </div>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
